@@ -56,11 +56,7 @@ GCP Activity <-?-> AWS CloudTrail
 4. C (Compute optimized - HPC, Gaming, Single Threaded apps)
 5. A (Accelerator optimized - Machine Learning)
 
-**Storage**:
-1. Where to store data (Region/Dual Region/Multi region)
-2. Class (Standard/Nearline/Coldline/Archive)
-3. Access control (Fine-grained / Uniform)
-4. Encryption (Google managed key/Customer managed key)
+
 
 **Databases**:
 **Structured Data - Relational DBs**
@@ -208,3 +204,88 @@ Supplements network level firewalls
 Ideal for line of business apps
 No VPN Needed, Straight forward implementation for administrators, simple to use for remote workers, no additional charge
 Restricts users to the one granted access only (if enabled)
+
+## Storage and Databases
+
+### Google Cloud Storage (AWS S3 / Azure Blob Storage)
+Project based bucket, Globally Unique ID, Specific Location
+
+**Storage**:
+1. Where to store data (Region/Dual Region/Multi region)
+2. Class (Standard/Nearline/Coldline/Archive)
+3. Access control (Fine-grained / Uniform)
+4. Encryption (Google managed key/Customer managed key)
+
+The link to gsutil is where i upload via CLI
+
+### Cloud DataStore (AWSDynamoDB, Azure CosmosDB)
+NoSQL for semistructured data
+ACID Transactions
+HIghly Available and Scalable
+Accessible Via Console, JSON API, GQL (like SQL)
+Kinds - like tables
+Entity - like row but can have different properties
+Property - like field but can have multiple values
+Key - like primary index
+
+### Cloud Sql (AWS RDS-Aurora, Azure DB for MySQL and for PostgreSQL)
+Fully managed relational database service
+Supportes PostgreSQL 9.6 and MySQL 5.5, 5.6, 5.7
+Robust scalability
+Automatic replication and backup
+Highly configurable SQL instances
+Data automatically encrypted
+Default firewals for each instance
+Full integration with Google Cloud services
+
+Non indexed properties do not return data on queries similar to where > "property"
+
+### Cloud Big Table (AWS DynamoDB, Azure Cosmos DB)
+Run large analytical and operational workloads using this fully managed scalable NoSQL database service for big data
+Used for Gmail, Google Search, Maps and Analytics as well as eBay and Spotify
+Differences from CloudStore:
+1. Wide column database (vs document database)
+2. There is No SQL like language available
+3. Single key per row
+4. Capable of holding PB of information
+5. Consistent Low latency and high throughput
+6. Dynamically change cluster size
+
+Use Cases: graph data, financial data, marketing data
+
+**CBT tool** allows to manage Cloud Big Tables
+
+### Cloud Spanner (Amazon Aurora , Azure SqlDatabase)
+CloudSpanner is a fully managed enterprise -grade relational database service
+Is to Cloud SQL what CloudBigTable is to Cloud DataStore
+5 Nine's Availability
+Multiple Client Libraries
+Scales Horizontaly like NoSql databases
+Industry standard SQL and supports DDL
+Use Cases: Call Centers, Financial Trading, Telecom, Transportation
+
+### Cloud Memory Store (Amazon Elasticache, Azure Cache)
+Fully managed, in-memory datastore service
+Redis protocol compatible
+Sub-milliseconds latency
+Scales up to 300GB instance
+Connects with AppEngine, Compute Engine and Kubernetes Engine
+Service Tiers:
+1. Basic - Basic Caching
+2. Standard - HA Redis instance
+
+Use cases: caching layer in gaming and analytical pipelines, stream processing
+
+
+
+
+
+
+
+## Big Data
+
+
+## NEtworking
+
+
+## Cutting Edge Google Cloud
