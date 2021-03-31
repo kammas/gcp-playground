@@ -275,15 +275,67 @@ Service Tiers:
 2. Standard - HA Redis instance
 
 Use cases: caching layer in gaming and analytical pipelines, stream processing
-
-
-
-
-
-
-
 ## Big Data
 
+### Big Query (Amazon Athena/Redshift, Azure Synapse Analytics)
+Fully managed data warehouse for big data
+Near real-time interactive analysis of massive datasets (terrabytes in seconds)
+Standard SQL
+Storage and computing are separate
+Query public or commerical dataset with my own
+Can query external services (CloudStorage,CloudBigTable and Google Drive)
+Automatic data replication
+Comprised of Datasets and Queries
+Use cases: Real time inventory, predictive digital marketing, analytical events
+
+### Cloud DataFlow (Kinesis, Stream Analytics)
+Based on Apache Beam, fully managed serverless service for creating pipelines to process data
+Processes data on multiple machines in parallel
+Handles both streaming and batch data
+Best option if there is no current implementation with Apache Hadoop or SPark
+Jobs can be created from templates
+Use Cases: Analytical dashboards, forecasting sales trends, ETL Operations
+
+### Cloud DataProc (AWS EMRm AWS Batch, AWS Glue, Azure Data Lake Analytics,HDInsight)
+Fully managed CLUSTER data processing service
+Compatible with Hadoop,Spark,Hive
+Fast Cluster Creation, scales clusters up and down without stopping the jobs
+Workflow templates supported
+(For more advanced cases than DataProc)
+Options: Single Node (1M - 0workers), Standard (1M - N workers), High Availability (3 M - N workers)
+
+
+### Cloud Pub/Sub (AWS Kinesis, Azure Event Hubs)
+Fully managed messaging middleware
+Allows secure and HA messages between independent apps
+Works with Google Cloud and external services
+1-N, N-1, N-M communications
+Both Push and Pull options
+Encrypted and HIPAA compliant messaging
+Use cases: Streaming data, event notifications, asynchronous workflow
+Accepts FROM:
+1. Cloud Logs
+2. Cloud API
+3. Cloud DataFlow
+4. Cloud Storage
+5. Compute Engine
+
+Sends data TO:
+1. Cloud networjung
+2. compute engine
+3. Cloud Dataflow
+4. App Engine
+5. Cloud monitoring
+
+### Cloud DataLab 
+Interactive data analysis and machine learning environment
+Packaged as a container and runs in a VM Instance
+Based on Jupyter Notebooks which can calculate results as well as visualize them in charts/bar graphs etc
+
+### Cloud Data Studio
+To create interactive Dashboards and BI Visualizers
+Connects to Cloud BigQuery,Spanner, Data Storage, SQL
+Process is -> connect to data source -> visualize data in report -> share report
 
 ## NEtworking
 
